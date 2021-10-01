@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Cadastro Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Desafio Cadastro Pessoal</h1>
+        <h2>Faça seu Cadastro</h2>
+    </header>
+    <section>
+        <p><span>*</span>Nome:<input type="text" name="nome" id="txtnom" required="required" placeholder="Nome Completo"></p>
+        <p><span>*</span>CPF: <input type="number" name="cpf" id="txtcpf" required="required" placeholder="Somente números"> RG:<input type="number" name="rg" id="txtrg" placeholder="Somente números"></p>
+        <p id="txtgen">Sexo: M<input type="radio" name="sexo" id="masc"> F<input type="radio" name="sexo" id="fem"></p>
+        <p><span>*</span>Endereço: <input type="text" name="endereço" id="txtend" required="required" placeholder="Endereço e complemento se houver"> <span>*</span>Numero:<input type="number" name="num" id="txtnum" required="required" placeholder="Nº"></p>
+        <p>Bairro: <input type="text" name="bairro" id="txtbair" placeholder="Bairro"> Cidade:<input type="text"name="cidade" id="txtcid" placeholder="Cidade"></p>
+        <p>Estado: <input type="text" name="estado" id="txtest" placeholder="Estado"> CEP:<input type="number"name="cep" id="txtcep" placeholder="CEP"></p>
+        <p>Telefone: <input type="number" name="telfixo" id="txtfixo" placeholder="DDD + Número"> <span>*</span>Celular:<input type="number" name="cel" id="txtcel" required="required" placeholder="DDD + Número"></p>
+
+        <p><button type="button" onclick="cadastro()">Cadastrar</button></p>
+
+        <div id="resultado">
+            <p id="msg">Dados Cadastrados aparecem aqui!</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Gama Academy - Transformando Talentos para o Futuro</p>
+        <p>Jefferson Augusto Ribeiro</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
