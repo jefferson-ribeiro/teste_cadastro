@@ -73,7 +73,7 @@ function cadastro() {
     } else if (validaCPF(cpf.value) == false) {
         window.alert(`CPF válido!`)
     } else {
-        window.alert(`CPF válido!`)
+        window.alert(`CPF inválido!`)
         // Checagem de sexo
         if (sexm.checked) {
             var genero = "Masculino"
