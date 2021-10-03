@@ -81,16 +81,17 @@ function cadastro() {
         } else {
             var genero = "Indefinido"
         }
+
         // Mostrar o resultado
         window.alert(`${no.value} o seu cadastro foi efetuado com sucesso!`)
         res.innerHTML = `<p><strong>Nome: </strong>${no.value}</p>`
-        res.innerHTML += `<p><strong>CPF: </strong>${cpf.value}</p>`
+        res.innerHTML += `<p><strong>CPF: </strong>${cpf.value} <span id="azul">Válido</span></p>`
         res.innerHTML += `<p><strong>RG: </strong>${rg.value}</p>`
         res.innerHTML += `<p><strong>Sexo: </strong>${genero}</p>`
         res.innerHTML += `<p><strong>Endereço: </strong>${end.value} <strong>Número: </strong>${num.value}</p>`
         res.innerHTML += `<p><strong>Bairro: </strong>${bair.value}</p>`
         res.innerHTML += `<p><strong>Cidade: </strong>${cid.value} <strong>Estado: </strong>${est.value}</p>`
-        res.innerHTML += `<p><strong>CEP: </strong>${cep.value}</p>`
+        res.innerHTML += `<p><strong>CEP: </strong>${resCep}</p>`
         res.innerHTML += `<p><strong>Telefone: </strong>${tel.value} <strong>Celular: </strong>${cel.value}</p>`
     }
 }

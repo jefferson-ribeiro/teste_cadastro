@@ -17,12 +17,12 @@
     <section>
         <p><span>*</span>Nome:<input type="text" name="nome" id="txtnom" required="required"
                 placeholder="Nome Completo"></p>
-        <p><span>*</span>CPF: <input type="number" name="cpf" id="txtcpf" required="required"
-                placeholder="Somente números"> RG:<input type="number" name="rg" id="txtrg"
-                placeholder="Somente números"></p>
+        <p><span>*</span>CPF: <input type="text" name="cpf" id="txtcpf" required="required"
+                placeholder="Somente números"> RG:<input type="text" name="rg" id="txtrg" placeholder="Somente números">
+        </p>
         <p id="txtgen">Sexo: M<input type="radio" name="sexo" id="masc"> F<input type="radio" name="sexo" id="fem"></p>
         <p><span>*</span>Endereço: <input type="text" name="endereço" id="txtend" required="required"
-                placeholder="Endereço e complemento se houver"> <span>*</span>Numero:<input type="number" name="num"
+                placeholder="Endereço e complemento se houver"> <span>*</span>Numero:<input type="text" name="num"
                 id="txtnum" required="required" placeholder="Nº"></p>
         <p>Bairro: <input type="text" name="bairro" id="txtbair" placeholder="Bairro"> Cidade:<input type="text"
                 name="cidade" id="txtcid" placeholder="Cidade"></p>
@@ -54,11 +54,12 @@
                 <option value="São Paulo">São Paulo</option>
                 <option value="Sergipe">Sergipe</option>
                 <option value="Tocantins">Tocantins</option>
-            </select> CEP:<input type="number" name="cep" id="txtcep" placeholder="CEP"></p>
-        <p>Telefone: <input type="number" name="telfixo" id="txtfixo" placeholder="DDD + Número">
-            <span>*</span>Celular:<input type="number" name="cel" id="txtcel" required="required"
-                placeholder="DDD + Número"></p>
-                
+            </select> CEP:<input type="text" name="cep" id="txtcep" placeholder="CEP"></p>
+        <p>Telefone: <input type="text" name="telfixo" id="txtfixo" placeholder="DDD + Número">
+            <span>*</span>Celular:<input type="text" name="cel" id="txtcel" required="required"
+                placeholder="DDD + Número">
+        </p>
+
         <p><button type="button" onclick="cadastro()">Cadastrar</button></p>
 
         <div id="resultado">
