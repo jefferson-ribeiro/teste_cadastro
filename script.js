@@ -71,9 +71,8 @@ function cadastro() {
         cel.style.backgroundColor = "#ff0000"
 
     } else if (validaCPF(cpf.value) == false) {
-        window.alert(`CPF válido!`)
-    } else {
         window.alert(`CPF inválido!`)
+    } else {
         // Checagem de sexo
         if (sexm.checked) {
             var genero = "Masculino"
