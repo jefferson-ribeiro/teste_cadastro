@@ -28,31 +28,31 @@ function cadastro() {
 
     //Função de Validação de CPF
     function validaCPF(cpf) {
-
-        if(cpf.length != 11) {
-        return false;
+        cpf = cpf.replace(/[\s.-]*/igm, '')
+        if (cpf.length != 11) {
+            return false;
         } else {
-        var numeros = cpf.substring(0, 9);
-        var digitos = cpf.substring(9);
-    
+            var numeros = cpf.substring(0, 9);
+            var digitos = cpf.substring(9);
+
             var soma = 0
-            for (var i = 10; i > 1; i --) {
+            for (var i = 10; i > 1; i--) {
                 soma += numeros.charAt(10 - i) * i;
             }
             var resultado = (soma % 11) < 2 ? 0 : 11 - (soma % 11);
-    
+
             //validação do primeiro digito
-            if(resultado != digitos.charAt(0)) {
+            if (resultado != digitos.charAt(0)) {
                 return false;
             }
-           soma = 0;
-           numeros = cpf.substring(0, 10);
-    
-           for (var k = 11; k > 1; k--) {
-                soma += numeros.charAt(11 - k) *k;
-           }
+            soma = 0;
+            numeros = cpf.substring(0, 10);
+
+            for (var k = 11; k > 1; k--) {
+                soma += numeros.charAt(11 - k) * k;
+            }
             resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-    
+
             //validação do segundo digito
             if (resultado != digitos.charAt(1)) {
                 return false;
@@ -91,7 +91,62 @@ function cadastro() {
         res.innerHTML += `<p><strong>Endereço: </strong>${end.value} <strong>Número: </strong>${num.value}</p>`
         res.innerHTML += `<p><strong>Bairro: </strong>${bair.value}</p>`
         res.innerHTML += `<p><strong>Cidade: </strong>${cid.value} <strong>Estado: </strong>${est.value}</p>`
-        res.innerHTML += `<p><strong>CEP: </strong>${resCep}</p>`
+        res.innerHTML += `<p><strong>CEP: </strong>${cep.value}</p>`
         res.innerHTML += `<p><strong>Telefone: </strong>${tel.value} <strong>Celular: </strong>${cel.value}</p>`
     }
 }
+
+//Mascaras:
+
+//Mascara CPF
+function mascaraCpf() {
+    var cpf = document.getElementById('txtcpf')
+    if (cpf.value.length == 3 || cpf.value.length == 7) {
+        cpf.value += "."
+    } else if (cpf.value.length == 11) {
+        cpf.value += "-"
+    }
+}
+
+//Mascara CEP
+function mascaraCep() {
+    var cep = document.getElementById(`txtcep`)
+    if (cep.value.length == 5) {
+        cep.value += "-"
+    }
+}
+
+//Mascara RG
+function mascaraRg() {
+    var rg = document.getElementById(`txtrg`)
+    if (rg.value.length == 2 || rg.value.length == 6) {
+        rg.value += "."
+    } else if (rg.value.length == 10) {
+        rg.value += "-"
+    }
+}
+/*
+//Mascara Telefone
+function mascaraTel() {
+    var tel = document.getElementById(`txtfixo`)
+    if (tel.value.length == (-0)) {
+        tel.value += "("
+    } else if (tel.value.length == 3) {
+        tel.value += ")"
+    } else if (tel.value.length == 8) {
+        tel.value += "-"
+    }
+}
+
+//Mascara Celular
+function mascaraCel() {
+    var cel = document.getElementById('txtcel')
+    if (cel.value.length == (-0)) {
+        cel.value += "("
+    } else if (cel.value.length == 2) {
+        cel.value += ")"
+    } else if (cel.value.length == 9) {
+        cel.value += "-"
+    }
+}
+*/
