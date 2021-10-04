@@ -17,7 +17,9 @@
     <section>
         <p><span>*</span>Nome:<input type="text" name="nome" id="txtnom" required="required"
                 placeholder="Nome Completo"></p>
-        <p><span>*</span>CPF: <input type="text" name="cpf" id="txtcpf" required="required" placeholder="Somente números" maxlength="14" onkeyup="mascaraCpf()"> RG:<input type="text" name="rg" id="txtrg" placeholder="Somente números" maxlength="12" onkeyup="mascaraRg()">
+        <p><span>*</span>CPF: <input type="text" name="cpf" id="txtcpf" required="required"
+                placeholder="Somente números" maxlength="14" onkeyup="mascaraCpf()"> RG:<input type="text" name="rg"
+                id="txtrg" placeholder="Somente números" maxlength="12" onkeyup="mascaraRg()">
         </p>
         <p id="txtgen">Sexo: M<input type="radio" name="sexo" id="masc"> F<input type="radio" name="sexo" id="fem"></p>
         <p><span>*</span>Endereço: <input type="text" name="endereço" id="txtend" required="required"
@@ -53,10 +55,13 @@
                 <option value="São Paulo">São Paulo</option>
                 <option value="Sergipe">Sergipe</option>
                 <option value="Tocantins">Tocantins</option>
-            </select> 
+            </select>
             CEP:<input type="text" name="cep" id="txtcep" placeholder="CEP" maxlength="9" onkeyup="mascaraCep()"></p>
-        <p>Telefone: <input type="text" name="telfixo" id="txtfixo" placeholder="DDD + Número" maxlength="13" onkeyup="mascaraTel()" >
-            <span>*</span>Celular:<input type="text" name="cel" id="txtcel" required="required" placeholder="DDD + Número" maxlength="14" onkeyup="mascaraCel()"></p>
+        <p>Telefone: <input type="text" name="telfixo" id="txtfixo" placeholder="DDD + Número" maxlength="13"
+                onkeydown="mascaraTel()">
+            <span>*</span>Celular:<input type="text" name="cel" id="txtcel" required="required"
+                placeholder="DDD + Número" maxlength="14" onkeydown="mascaraCel()">
+        </p>
 
         <p><button type="button" onclick="cadastro()">Cadastrar</button></p>
 

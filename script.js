@@ -125,7 +125,7 @@ function mascaraRg() {
         rg.value += "-"
     }
 }
-/*
+
 //Mascara Telefone
 function mascaraTel() {
     var tel = document.getElementById(`txtfixo`)
@@ -143,10 +143,9 @@ function mascaraCel() {
     var cel = document.getElementById('txtcel')
     if (cel.value.length == (-0)) {
         cel.value += "("
-    } else if (cel.value.length == 2) {
+    } else if (cel.value.length == 3) {
         cel.value += ")"
     } else if (cel.value.length == 9) {
         cel.value += "-"
     }
 }
-*/
