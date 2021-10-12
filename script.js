@@ -64,11 +64,11 @@ function cadastro() {
     //Validação dos campos
     if (no.value.length == 0 || cpf.value.length == 0 || end.value.length == 0 || num.value.length == 0 || cel.value.length == 0) {
         window.alert(`Preencha os itens obrigatórios*!`)
-        no.style.backgroundColor = "#ff0000"
-        cpf.style.backgroundColor = "#ff0000"
-        end.style.backgroundColor = "#ff0000"
-        num.style.backgroundColor = "#ff0000"
-        cel.style.backgroundColor = "#ff0000"
+        no.style.backgroundColor = "rgb(250, 199, 199)"
+        cpf.style.backgroundColor = "rgb(250, 199, 199)"
+        end.style.backgroundColor = "rgb(250, 199, 199)"
+        num.style.backgroundColor = "rgb(250, 199, 199)"
+        cel.style.backgroundColor = "rgb(250, 199, 199)"
 
     } else if (validaCPF(cpf.value) == false) {
         window.alert(`CPF inválido!`)
