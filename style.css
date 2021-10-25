@@ -21,7 +21,7 @@ section {
     background-color: white;
     border-radius: 2vh;
     padding: 2vh;
-    width: 80vh;
+    width: 85%;
     margin: auto;
     box-shadow: 3px 3px 10px rgb(51, 51, 51);
 }
@@ -60,13 +60,13 @@ button {
     width: 10%;
 }
 #txtbair {
-    width: 30%;
+    width: 20%;
 }
 #txtcid {
-    width: 40%;
+    width: 20%;
 }
 #txtest{
-    width: 30%;
+    width: 20%;
 }
 #txtcep{
     width: 25%;
