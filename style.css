@@ -86,7 +86,7 @@ button {
 
 /*Inputs*/
 #txtnom {
-    width: 85%;
+    width: 80%;
 }
 #txtcpf {
     width: 35%;
@@ -105,7 +105,7 @@ button {
     width: 50%;
 }
 #txtcid {
-    width: 40%;
+    width: 50%;
 }
 #txtest{
     width: 40%;
@@ -114,10 +114,10 @@ button {
     width: 25%;
 }
 #txtfixo {
-    width: 30%;
+    width: 40%;
 }
 #txtcel {
-    width: 30%;
+    width: 40%;
 }
 /* Local onde aparece o resultado */
 #msg {
