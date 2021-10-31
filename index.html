@@ -1,130 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio Cadastro Pessoal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Desafio Cadastro Pessoal</h1>
-        <h2>Faça seu Cadastro</h2>
+      <h1>Desafio Cadastro Pessoal</h1>
+      <h2>Faça seu Cadastro</h2>
     </header>
     <section>
-        <form action="" class="formulario">
-            <div class="div1">
-                <label for=""><span>*</span>Nome:</label>
-                <input type="text" name="nome" id="txtnom" required="required" placeholder="Nome Completo">
-            </div>
-
-            <div class="div2">
-                <label for=""><span>*</span>CPF:</label>
-                <input type="text" name="cpf" id="txtcpf" required="required" placeholder="Somente números"
-                    maxlength="14" onkeyup="mascaraCpf()">
-            </div>
-
-            <div class="div3">
-                <label for="">RG:</label>
-                <input type="text" name="rg" id="txtrg" placeholder="Somente números" maxlength="12"
-                    onkeyup="mascaraRg()">
-            </div>
-
-            <div class="div4">
-                <label for="">Sexo:</label>
-                <label for="">M</label>
-                <input type="radio" name="sexo" id="masc">
-                <label for="">F</label>
-                <input type="radio" name="sexo" id="fem">
-            </div>
-
-            <div class="div5">
-                <label for="">CEP:</label>
-                <input type="text" name="cep" id="txtcep" placeholder="CEP" maxlength="9"
-                    onblur="pesquisacep(this.value);" onkeyup="mascaraCep()">
-            </div>
-
-            <div class="div6">
-                <label for=""><span>*</span>Endereço:</label>
-                <input type="text" name="endereço" id="txtend" required="required"
-                    placeholder="Endereço e complemento se houver">
-            </div>
-
-            <div class="div7">
-                <label for=""><span>*</span>Numero:</label>
-                <input type="text" name="num" id="txtnum" required="required" placeholder="Nº">
-            </div>
-
-            <div class="div8">
-                <label for="">Bairro:</label>
-                <input type="text" name="bairro" id="txtbair" placeholder="Bairro">
-            </div>
-
-            <div class="div9">
-                <label for="">Cidade:</label>
-                <input type="text" name="cidade" id="txtcid" placeholder="Cidade">
-            </div>
-
-            <div class="div10">
-                <label for="">Estado:</label>
-                <select name="estados-brasil" id="txtest">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
-            </div>
-
-            <div class="div11">
-                <label for="">Telefone:</label>
-                <input type="text" name="telfixo" id="txtfixo" placeholder="DDD + Número" maxlength="13"
-                    onkeydown="mascaraTel()">
-            </div>
-
-            <div class="div12">
-                <label for=""><span>*</span>Celular:</label>
-                <input type="text" name="cel" id="txtcel" required="required" placeholder="DDD + Número" maxlength="14"
-                    onkeydown="mascaraCel()">
-            </div>
-        </form>
-
-        <p><button type="button" onclick="cadastro()">Cadastrar</button></p>
-
-        <div id="resultado">
-            <p id="msg">Dados Cadastrados aparecem aqui!</p>
+      <form action="" class="formulario">
+        <div class="div1">
+          <label for=""><span>*</span>Nome:</label>
+          <input
+            type="text"
+            name="nome"
+            id="txtnom"
+            required="required"
+            placeholder="Nome Completo"
+          />
         </div>
+
+        <div class="div2">
+          <label for=""><span>*</span>CPF:</label>
+          <input
+            type="text"
+            name="cpf"
+            id="txtcpf"
+            required="required"
+            placeholder="Somente números"
+            maxlength="14"
+            onkeyup="mascaraCpf()"
+          />
+        </div>
+
+        <div class="div3">
+          <label for="">RG:</label>
+          <input
+            type="text"
+            name="rg"
+            id="txtrg"
+            placeholder="Somente números"
+            maxlength="12"
+            onkeyup="mascaraRg()"
+          />
+        </div>
+
+        <div class="div4">
+          <label for="">Sexo:</label>
+          <input type="radio" name="sexo" id="masc" />
+          <label for="">M</label>
+          <input type="radio" name="sexo" id="fem" />
+          <label for="">F</label>
+        </div>
+
+        <div class="div5">
+          <label for="">CEP:</label>
+          <input
+            type="text"
+            name="cep"
+            id="txtcep"
+            placeholder="CEP"
+            maxlength="9"
+            onblur="pesquisacep(this.value);"
+            onkeyup="mascaraCep()"
+          />
+        </div>
+
+        <div class="div6">
+          <label for=""><span>*</span>Endereço:</label>
+          <input
+            type="text"
+            name="endereço"
+            id="txtend"
+            required="required"
+            placeholder="Endereço e complemento se houver"
+          />
+        </div>
+
+        <div class="div7">
+          <label for=""><span>*</span>Numero:</label>
+          <input
+            type="text"
+            name="num"
+            id="txtnum"
+            required="required"
+            placeholder="Nº"
+          />
+        </div>
+
+        <div class="div8">
+          <label for="">Bairro:</label>
+          <input type="text" name="bairro" id="txtbair" placeholder="Bairro" />
+        </div>
+
+        <div class="div9">
+          <label for="">Cidade:</label>
+          <input type="text" name="cidade" id="txtcid" placeholder="Cidade" />
+        </div>
+
+        <div class="div10">
+          <label for="">Estado:</label>
+          <select name="estados-brasil" id="txtest">
+            <option disabled selected value>Selecione seu estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+
+        <div class="div11">
+          <label for="">Telefone:</label>
+          <input
+            type="text"
+            name="telfixo"
+            id="txtfixo"
+            placeholder="DDD + Número"
+            maxlength="13"
+            onkeydown="mascaraTel()"
+          />
+        </div>
+
+        <div class="div12">
+          <label for=""><span>*</span>Celular:</label>
+          <input
+            type="text"
+            name="cel"
+            id="txtcel"
+            required="required"
+            placeholder="DDD + Número"
+            maxlength="14"
+            onkeydown="mascaraCel()"
+          />
+        </div>
+        <p><button type="button" onclick="cadastro()">Cadastrar</button></p>
+      </form>
+      <div id="resultado">
+        <p id="msg">Dados Cadastrados aparecem aqui!</p>
+      </div>
     </section>
     <footer>
-        <p>&copy;Gama Academy - Transformando Talentos para o Futuro</p>
-        <p>Jefferson Augusto Ribeiro</p>
+      <p>&copy;Gama Academy - Transformando Talentos para o Futuro</p>
+      <p>Jefferson Augusto Ribeiro</p>
     </footer>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
