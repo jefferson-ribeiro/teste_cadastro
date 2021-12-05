@@ -139,14 +139,16 @@ function pesquisacep(valor) {
 function cadastro() {
   //Função de Validação de CPF
   function validaCPF(cpf) {
-    cpf = cpf.replace(/[\s.-]*/gim, '') //remove carcteres especiais
-    if (cpf.length != 11) {
+    //remove carcteres especiais
+    cpf = cpf.replace(/[\s.-]*/gim, '') 
+    // obrigatoriamente 11 caracteres
+    if (cpf.length != 11) {             
       return false
     } else {
       var numeros = cpf.substring(0, 9)
       var digitos = cpf.substring(9)
 
-      var soma = 0
+      var soma = 0                       
       for (var i = 10; i > 1; i--) {
         soma += numeros.charAt(10 - i) * i
       }
